@@ -56,14 +56,14 @@ class Canvas(object):
         if self.x < 0:
             self.x = 0
 
-        if self.x > 29:
-            self.x = 29
+        if self.x >= self.rows:
+            self.x = self.rows - 1
 
         if self.y < 0:
             self.y = 0
 
-        if self.y > 29:
-            self.y = 29
+        if self.y >= self.cols:
+            self.y = self.cols - 1
 
     def get_cursor(self):
         return self.x, self.y
